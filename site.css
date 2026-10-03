@@ -1,0 +1,105 @@
+/* غلاف موقع 940 — هوية أمانة عسير: بني #392015 / بيج #D4AF91 */
+:root{
+  --brown:#392015; --brown-2:#4a2d20; --beige:#d4af91; --tint:#614c44;
+  --ivory:#faf6f1; --card:#fff; --line:#e6dccf; --ink:#392015; --muted:#614c44;
+  --nav-w:264px; --rail-w:56px; --bar-h:52px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{display:flex;flex-direction:row;background:var(--ivory);color:var(--ink);
+  font-family:'Tajawal','IBM Plex Sans Arabic',Arial,sans-serif;font-size:17px;line-height:1.8;overflow:hidden}
+a{color:inherit}
+.skip{position:absolute;inset-inline-start:8px;top:-60px;background:var(--beige);color:var(--brown);padding:8px 14px;border-radius:8px;z-index:60}
+.skip:focus{top:8px}
+:focus-visible{outline:2px solid var(--beige);outline-offset:2px}
+
+/* ===== القائمة الجانبية (يمين، RTL) ===== */
+.sidenav{flex:0 0 var(--nav-w);width:var(--nav-w);height:100vh;height:100dvh;background:var(--brown);color:#f2e7de;
+  display:flex;flex-direction:column;overflow:hidden;transition:flex-basis .22s ease,width .22s ease;z-index:40}
+html[data-nav="rail"] .sidenav{flex-basis:var(--rail-w);width:var(--rail-w)}
+.side-top{display:flex;flex-direction:column;align-items:center;gap:14px;padding:10px 0 0}
+.rail-btn,.menu-btn{width:40px;height:40px;border:0;border-radius:10px;background:transparent;color:var(--beige);font-size:22px;line-height:1;cursor:pointer}
+.rail-btn:hover,.menu-btn:hover{background:rgba(212,175,145,.14)}
+.rail-label{display:none;writing-mode:vertical-rl;color:var(--beige);font-weight:900;font-size:22px;letter-spacing:2px}
+html[data-nav="rail"] .rail-label{display:block}
+.side-body{display:flex;flex-direction:column;flex:1;min-height:0;min-width:var(--nav-w);overflow-y:auto;padding:4px 18px 16px}
+html[data-nav="rail"] .side-body{display:none}
+.brand{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;padding:6px 0 18px;border-bottom:1px solid rgba(212,175,145,.22)}
+.brand img{display:block;width:190px;height:auto;aspect-ratio:720/281}
+.brand-name{font-weight:900;font-size:40px;line-height:1;color:var(--beige);letter-spacing:1px}
+.nav-list{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:2px}
+.nav-list a{display:block;padding:10px 14px;border-radius:10px;border-left:3px solid transparent;text-decoration:none;color:#f2e7de;font-size:16px;font-weight:500}
+.nav-list a:hover{background:rgba(212,175,145,.10)}
+.nav-list a[aria-current="page"]{background:rgba(212,175,145,.16);border-left-color:var(--beige);color:#fff;font-weight:700}
+.nav-sep{height:1px;margin:8px 14px;background:rgba(212,175,145,.22)}
+.side-foot{margin-top:auto;padding-top:18px;font-size:12.5px;line-height:1.8;color:rgba(242,231,222,.78)}
+.side-foot p{margin:0 0 6px}
+.side-foot .foot-ver{color:var(--beige);font-weight:700}
+
+/* ===== المنصة (البرنامج + الصفحات) ===== */
+.stage{position:relative;flex:1;min-width:0;height:100vh;height:100dvh}
+.app-frame{position:absolute;inset:0;width:100%;height:100%;border:0;background:var(--ivory)}
+.stage.show-pages .app-frame{visibility:hidden}
+.pages{position:absolute;inset:0;overflow-y:auto;background:var(--ivory)}
+.pages[hidden],.page[hidden]{display:none}
+.page{max-width:760px;margin:0 auto;padding:64px 28px 8px;outline:none}
+.page h1{margin:0 0 26px;font-size:34px;line-height:1.35;font-weight:900;color:var(--brown)}
+.page h1::after{content:"";display:block;width:56px;height:3px;margin-top:14px;background:var(--beige);border-radius:2px}
+.page h2{margin:34px 0 8px;font-size:21px;font-weight:700;color:var(--brown)}
+.page p{margin:0 0 18px;font-size:18px;line-height:2;color:#2b1a11}
+.page .meta{color:var(--muted);font-size:15px}
+.page .mail{margin:6px 0 26px;font-size:22px;font-weight:700}
+.page .mail a,.page a[href^="mailto:"]{color:var(--brown);text-decoration-color:var(--beige);text-underline-offset:5px}
+.page .mail a:hover{text-decoration-thickness:2px}
+.page .notice{padding:14px 18px;background:#fff;border:1px solid var(--line);border-inline-start:4px solid var(--beige);border-radius:12px;font-size:16px;color:var(--muted)}
+.page-foot{max-width:760px;margin:40px auto 0;padding:22px 28px 40px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+.page-foot p{margin:0 0 4px}
+.noscript{padding:24px;text-align:center}
+
+/* ===== أيقونة الملاحظات + النافذة ===== */
+.ico{display:block;flex:none}
+.fb-btn{width:40px;height:40px;border:0;border-radius:10px;background:transparent;color:var(--beige);cursor:pointer;display:none;align-items:center;justify-content:center}
+.fb-btn:hover{background:rgba(212,175,145,.14)}
+.rail-foot{display:none;justify-content:center;padding:0 0 14px}
+html[data-nav="rail"] .rail-foot{display:flex}
+html[data-nav="rail"] .fb-rail{display:inline-flex}
+.fb-wide{display:flex;align-items:center;gap:10px;margin-top:14px;padding:9px 14px;border:1px solid rgba(212,175,145,.35);border-radius:10px;background:transparent;color:var(--beige);font:inherit;font-size:15px;font-weight:500;cursor:pointer;text-align:start}
+.fb-wide:hover{background:rgba(212,175,145,.12)}
+.fb-modal{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(20,10,5,.55)}
+.fb-modal[hidden]{display:none}
+.fb-card{position:relative;width:min(380px,100%);background:var(--ivory);color:var(--ink);border-radius:16px;padding:30px 26px 26px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.4);border-top:4px solid var(--beige)}
+.fb-card:focus{outline:none}
+.fb-close{position:absolute;top:10px;inset-inline-end:10px;width:34px;height:34px;border:0;border-radius:8px;background:transparent;color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.fb-close:hover{background:rgba(57,32,21,.08)}
+.fb-badge{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;background:var(--brown);color:var(--beige);margin-bottom:10px}
+.fb-card h2{margin:0 0 6px;font-size:22px;font-weight:900;color:var(--brown)}
+.fb-card p{text-wrap:balance;margin:0 0 20px;font-size:16px;color:var(--muted)}
+.fb-send{display:inline-block;min-width:150px;padding:10px 26px;border-radius:10px;background:var(--brown);color:var(--beige);font-weight:700;text-decoration:none}
+.fb-send:hover{background:var(--brown-2)}
+.page .mail{display:flex;align-items:center;gap:12px}
+.mail-ico{color:var(--brown);background:rgba(212,175,145,.28);border-radius:10px;padding:7px;box-sizing:content-box}
+
+/* ===== الجوال والأجهزة الصغيرة ===== */
+.topbar,.scrim{display:none}
+@media (max-width:900px){
+  body{flex-direction:column}
+  .topbar{display:flex;align-items:center;gap:10px;flex:0 0 var(--bar-h);height:var(--bar-h);padding:0 10px;background:var(--brown);color:var(--beige);z-index:30}
+  .topbar-title{font-weight:900;font-size:22px;letter-spacing:1px}
+  .fb-top{display:inline-flex;margin-inline-start:auto}
+  html[data-nav="rail"] .rail-foot{display:none}
+  .stage{flex:1;height:auto;min-height:0}
+  .sidenav,html[data-nav="rail"] .sidenav{position:fixed;top:0;bottom:0;right:0;height:auto;width:min(300px,86vw);flex:none;
+    transform:translateX(100%);visibility:hidden;transition:transform .22s ease,visibility 0s linear .22s;box-shadow:-12px 0 40px rgba(0,0,0,.35)}
+  html[data-drawer="open"] .sidenav{transform:none;visibility:visible;transition:transform .22s ease}
+  .side-top{display:none}
+  html[data-nav="rail"] .side-body{display:flex}
+  .side-body{min-width:0;padding-top:18px}
+  .scrim{position:fixed;inset:0;background:rgba(20,10,5,.5);z-index:35}
+  html[data-drawer="open"] .scrim{display:block}
+  .scrim[hidden]{display:none!important}
+  .page{padding:36px 18px 4px}
+  .page h1{font-size:28px}
+  .page p{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){.sidenav{transition:none!important}}
+@media print{.sidenav,.topbar,.scrim{display:none!important}body{display:block;overflow:visible}.stage{height:auto}}
