@@ -4451,7 +4451,7 @@ html{--ui-s:1}
 html[data-ui-size="sm"]{--ui-s:.92}
 html[data-ui-size="lg"]{--ui-s:1.1}
 html.op940-modal-open,html.op940-modal-open body{overflow:hidden}
-.op940-quick{position:fixed;top:10px;left:12px;display:flex;gap:8px;z-index:5}
+.op940-quick{position:fixed;bottom:14px;left:12px;display:flex;gap:8px;z-index:1500}
 .op940-qbtn{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,235,205,.5);background:rgba(58,36,24,.9);color:#fff;border-radius:999px;padding:7px 14px;font:inherit;font-size:calc(13px*var(--ui-s));font-weight:700;cursor:pointer;backdrop-filter:blur(4px)}
 .op940-qbtn:hover,.op940-qbtn[aria-pressed="true"]{background:rgba(255,255,255,.28)}
 .op940-qbtn:focus-visible{outline:2px solid #ffe3b8;outline-offset:2px}
@@ -4485,7 +4485,7 @@ html.op940-modal-open,html.op940-modal-open body{overflow:hidden}
 .op940-prev{width:min(1100px,100%)}
 .op940-prev-body{padding:12px;overflow:auto;background:#efe7d8;text-align:center;flex:1;min-height:200px}
 .op940-prev-body img{max-width:100%;height:auto;border:1px solid #d9c9ad;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.18)}
-@media(max-width:640px){.op940-row{flex-direction:column;align-items:flex-start}.op940-quick{top:8px;left:8px}.op940-qbtn{padding:6px 10px}.op940-qbtn .q-txt{font-size:12px}}
+@media(max-width:640px){.op940-row{flex-direction:column;align-items:flex-start}.op940-quick{bottom:10px;left:8px}.op940-qbtn{padding:6px 10px}.op940-qbtn .q-txt{font-size:12px}}
 
 /* ===== حجم الواجهة: متوازن (خط + تباعد البطاقات والعناصر) دون Zoom ===== */
 html[data-ui-size="sm"] .card,html[data-ui-size="sm"] .section{--pad-s:.92}
