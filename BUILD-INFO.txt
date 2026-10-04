@@ -1,4 +1,0 @@
-version=1.13.0
-www/index.html sha256=7294bd7272091c89d81c38c8abff7006addd3d65c0a1edf79d7fb6cb865d8b39
-www-android/index.html sha256=39c1c0feddf27f0e2ba8aa93bddc61f4e9f9a09c67bb3b35c95acbbaa0f60889
-www-web/app.html sha256=00c01033f84344f79cf1e25ae99840a23d94a64a4904c9e7647c5d66f3e7d41d
